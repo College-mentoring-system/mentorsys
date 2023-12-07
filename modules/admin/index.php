@@ -27,14 +27,22 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         <html>
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
             <title>Admin-SCOE</title>
+=======
+            <title>Admin-Sanjivani College of Engineering</title>
+>>>>>>> 34765061d9ccde569ffebd9db78338295b9b51c8
             <link rel="stylesheet" type="text/css" href="css/style.css">
         </head>
         <body>
         <h2 align="center" style="color:black ">Sanjivani Of College of Engineering</h2>
         <div class="header">
 
+<<<<<<< HEAD
             <span style="color:white;font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; Menu </span>
+=======
+            <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; MENU </span>
+>>>>>>> 34765061d9ccde569ffebd9db78338295b9b51c8
 
             <div class="header-right">
                 <a href="profile.php">
@@ -43,7 +51,11 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         </div>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<<<<<<< HEAD
             <a href="index.php" class="logo"><span style="color:red;font-size:70px">SCOE</span></a>
+=======
+            <a href="index.php" class="logo"><span style="color:red;font-size:30px">Sanjivani College of Engineering</span></a>
+>>>>>>> 34765061d9ccde569ffebd9db78338295b9b51c8
             <a href="profile.php"><?php echo $fname . " " . $lname . " (" . strtoupper($eid) . ")" ?></a>
             <a href="index.php">Home</a>
             <a href="student.php">Student</a>

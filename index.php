@@ -89,7 +89,7 @@ if(isset($_SESSION['id'])){
 
     <head>
         <meta charset="UTF-8">
-        <title>CIMS</title>
+        <title>Sanjivani</title>
 
 
         <link rel='stylesheet prefetch'
