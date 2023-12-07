@@ -1,10 +1,10 @@
 <?php
-/**
+/*
  * Created by PhpStorm.
  * User: Bharat
  * Date: 7/2/2018
  * Time: 9:25 AM
- */
+ 
 
 session_start();
 if(isset($_SESSION['id']) && isset($_SESSION['username'])){
@@ -121,5 +121,6 @@ if($status == 'yes' || $status == 'Yes') {
 }else{
     header("Location: ../../index.php");
 }
+*/
 
 ?>

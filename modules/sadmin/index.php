@@ -43,12 +43,11 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         </div>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.php" class="logo"><span style="color:red;font-size:70px">CIMS</span></a>
+            <a href="index.php" class="logo"><span style="color:red;font-size:70px">SCOE</span></a>
             <a href="profile.php"><?php echo $fname . " " . $lname . " (" . strtoupper($eid) . ")" ?></a>
             <a href="index.php">Home</a>
             <a href="add.php">Add/Update</a>
             <a href="view.php">View Details</a>
-            <a href="incomingcomplaint.php">Incoming Complaint</a>
             <a href="update_password.php">Update Password</a>
             <a href="../../logout.php">Logout</a>
         </div>
@@ -68,7 +67,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
                     $sql_find_batch_get=mysqli_query($conn,$sql_find_batch);
                     $sql_find_batch_total = mysqli_fetch_assoc($sql_find_batch_get);
                     ?>
-                    <th><div style="background-color: lightcoral; color: white; padding-left:20px;padding-right: 20px;padding-bottom: 1px;padding-top: 1px;"><h3>Total Centers</h3><p><?php echo $sql_find_batch_total['total_center'];?></p></div></th>
+                    <th><div style="background-color: lightcoral; color: white; padding-left:20px;padding-right: 20px;padding-bottom: 1px;padding-top: 1px;"><h3>Total Department</h3><p><?php echo $sql_find_batch_total['total_center'];?></p></div></th>
 
                     <?php
                     $sql_find_sid = "SELECT count(sid) AS total_sid FROM students";
@@ -103,7 +102,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         </div>
 
         <div align="center" style="background-color: lightgray; padding: 10px;">
-            <h3 style="color: blue">Center And Center Admins</h3>
+            <h3 style="color: blue">Department And Department Admins</h3>
             <table border="1" cellpadding="10px">
                 <tr>
                     <th width="250px">Batches</th>

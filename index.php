@@ -160,7 +160,7 @@ if(isset($_SESSION['id'])){
     </div>
 
     <div class='love'>
-        <p>Made with <img src="images/love_copy.png"/> by <a href='https://iambharat.tk' target='_blank'> Bharat Agarwal </a></p>
+        <p>Made with <img src="images/love_copy.png"/> by <a href='https://iambharat.tk' target='_blank'> Tech Turtles </a></p>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
