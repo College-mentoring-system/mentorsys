@@ -44,7 +44,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
             <a href="search.php">Search Student Information</a>
             
             <a href="timetable.php">TimeTable</a>
-            
+
             <a href="update_password.php">Update Password</a>
             <a href="../../../logout.php">Logout</a>
         </div>
