@@ -27,7 +27,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
             <link rel="stylesheet" type="text/css" href="css/style.css">
         </head>
         <body>
-        <h2 align="center" style="color: blue"><?php echo ucfirst($center) . ' (' . strtoupper($course) . ')' ?></h2>
+        <h2 align="center" style="color: black">Sanjivani College Of Engineering,Kopargaon</h2>
         <div class="header">
 
             <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; Menu </span>
@@ -39,7 +39,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         </div>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.php" class="logo"><span style="color:red;font-size:25px">Sanjivani College Of Engineering</span></a>
+            <a href="index.php" class="logo"><span style="color:white;font-size:25px">SCOE</span></a>
             <a href="profile.php"><?php echo $fname . " " . $lname . " (" . strtoupper($eid) . ")" ?></a>
             <a href="index.php">Home</a>
             
@@ -52,6 +52,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         </div>
         
         <div style="padding-left:20px; float: left;border-left: 6px solid red;background-color: lightgrey;width: 50%">
+        <div align="center">
             <h1 align="center">Time Table</h1>
             <p align="center"><?php echo date("d-m-Y") . '<br>(' . date("l") . ')' ?></p>
             <table border="2" align="center" cellpadding="5px">
@@ -62,7 +63,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
                     <th>Batch</th>
                     <th>Mentor EID</th>
                 </tr>
-
+    
                 <?php
                 $day = date("l");
                 $sql_time = "SELECT * FROM timetable WHERE center = '$center'AND course = '$course' AND day ='$day' AND eid = '$eid'";
@@ -96,6 +97,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
                     <?php } ?>
 
             </table>
+        </div>
         </div>
         
         
