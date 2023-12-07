@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Bharat
- * Date: 6/8/2018
- * Time: 6:35 AM
- */
+
 
 session_start();
 include ("../../config/database.php");
@@ -56,7 +51,7 @@ while($rows = mysqli_fetch_assoc($sql_profile_check)){
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?php echo $fname.' '.$lname ?>-Students-CIMS</title>
+    <title><?php echo $fname.' '.$lname ?>-Students-SCOE</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -74,7 +69,7 @@ while($rows = mysqli_fetch_assoc($sql_profile_check)){
 <h2 align="center" style="color: blue"><?php echo ucfirst($center) . ' (' . strtoupper($course) . ')' ?></h2>
 <div class="header">
 
-    <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; open </span>
+    <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; Menu </span>
 
     <div class="header-right">
         <a href="profile.php">
@@ -83,15 +78,13 @@ while($rows = mysqli_fetch_assoc($sql_profile_check)){
 </div>
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.php" class="logo"><span style="color:red;font-size:70px">CIMS</span></a>
+    <a href="index.php" class="logo"><span style="color:red;font-size:25px">Sanjivani College Of Engineering</span></a>
     <a href="profile.php"><?php echo $fname . " " . $lname . " (" . strtoupper($sid) . ")" ?></a>
     <a href="index.php">Home</a>
-    <a href="attendance.php">Attendance</a>
+   
     <a href="timetable.php">TimeTable</a>
-    <a href="marks.php">Marks</a>
-    <a href="fees.php">Fees</a>
-    <a href="complaint.php">Complaint</a>
-    <a href="password_update.php">Update Password</a>
+
+    
     <a href="../../logout.php">Logout</a>
 </div>
 <div class="container">
@@ -117,7 +110,7 @@ while($rows = mysqli_fetch_assoc($sql_profile_check)){
     </div>
     <div align="center">
         <p><b><i>Address:</i></b><?php echo $address.', '. $city.', '.$state.', '.$postal_code ?></p>
-        <p><b><i>Total Fee:</i></b><?php echo $fees; ?> &nbsp; &nbsp; <b><i>Scholarship:</i></b><?php echo $scholarship.'%' ?> &nbsp;&nbsp;<b><i>Total Fee To Pay:</i></b><?php $newfee = $fees-($fees*$scholarship)/100; echo $newfee ?> &nbsp; &nbsp; <b><i>Total Paid Fees:</i></b><?php echo $paid_fees; ?> &nbsp;&nbsp; <b><i>Fees To Pay:</i></b><?php echo $newfee-$paid_fees;  ?> &nbsp; &nbsp;&nbsp;<a href="fees.php"><button>Pay</button></a></p>
+        <p><b><i>Total Fee:</i></b><?php echo $fees; ?> &nbsp; &nbsp; <b><i>Scholarship:</i></b><?php echo $scholarship.'%' ?> &nbsp;&nbsp;<b><i>Total Fee To Pay:</i></b><?php $newfee = $fees-($fees*$scholarship)/100; echo $newfee ?> &nbsp; &nbsp; <b><i>Total Paid Fees:</i></b><?php echo $paid_fees; ?> &nbsp;&nbsp; <b><i>Fees To Pay:</i></b><?php echo $newfee-$paid_fees;  ?> &nbsp; &nbsp;&nbsp;</p>
         <p><b><i>Class: </i></b><?php echo $class; ?> &nbsp; &nbsp; <?php if(isset($mark10)){echo '<b><i>Class 10 Marks: </i></b>'.$mark10; } ?> &nbsp;&nbsp; <?php if(isset($mark12)){echo '<b><i>Class 12 Marks:</i></b>'.$mark12; } ?>&nbsp</p>
         <p><b><i>Previous Exam Attempted: </i></b><?php echo $pre_exam.' ( '.$pre_exam_year.')'; ?> &nbsp;&nbsp; <b><i>Previous Exam Marks: </i></b><?php echo $pre_exam_marks; ?></p>
         <p><b><i>Father's Name: </i></b><?php echo ucfirst($fathername); ?> &nbsp;&nbsp; <b><i>Father's Occupation: </i></b><?php echo ucfirst($fatheroccu); ?> &nbsp;&nbsp; <b><i>Father's Mobile:</i></b> <?php echo '+91 '.$fathermob; ?></p>

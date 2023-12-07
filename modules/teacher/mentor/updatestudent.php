@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Bharat
- * Date: 7/2/2018
- * Time: 2:01 PM
- */
+
 
 session_start();
 if(isset($_SESSION['id']) && isset($_SESSION['username'])){
