@@ -34,7 +34,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         <h2 align="center" style="color: blue"><?php echo "Super Admin (Main Center)" ?></h2>
         <div class="header">
 
-            <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; open </span>
+            <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; MENU </span>
 
             <div class="header-right">
                 <a href="profile.php">
