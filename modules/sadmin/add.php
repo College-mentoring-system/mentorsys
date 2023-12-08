@@ -22,22 +22,22 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         <html>
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>SAdmin-CIMS</title>
+            <title>SAdmin-SCOE</title>
             <link rel="stylesheet" type="text/css" href="../admin/css/style.css">
             <style>
                 .linking{
-                    background-color: #ddffff;
+                    background-color: #b33b72;
                     padding: 7px;
                     text-decoration: none;
                 }
                 .linking:hover{
-                    background-color: blue;
+                    background-color: white;
                     color: white;
                 }
 
                 input,button,select{
                     padding: 5px;
-                    border: 2px solid blue;
+                    border: 2px black;
                     border-radius: 10px;
                     margin: 2px;
                 }
@@ -64,10 +64,10 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
             </style>
         </head>
         <body>
-        <h2 align="center" style="color: blue"><?php echo "Super Admin" ?></h2>
+        <h2 align="center" style="color: black"><?php echo "SUPER ADMIN" ?></h2>
         <div class="header">
 
-            <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; open </span>
+            <span style="color:white";font-size:45px;cursor:pointer" class="logo" onclick="openNav()">&#9776; Menu </span>
 
             <div class="header-right">
                 <a href="profile.php">
@@ -76,7 +76,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         </div>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.php" class="logo"><span style="color:red;font-size:70px">SCOE</span></a>
+            <a href="index.php" class="logo"><span style="color:white;font-size:70px">SCOE</span></a>
             <a href="profile.php"><?php echo $fname . " " . $lname . " (" . strtoupper($eid) . ")" ?></a>
             <a href="index.php">Home</a>
             <a href="add.php">Add/Update</a>
@@ -85,11 +85,11 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
             <a href="../../logout.php">Logout</a>
         </div>
 
-        <div align="center" style="background-color: aquamarine;padding: 10px">
-            <a href="add.php?addadmin=true" class="linking">Add Admin</a>
-            <a href="add.php?updateadmin=true" class="linking">Update Admin</a>
-            <a href="add.php?addcenters=true" class="linking">Add Centers</a>
-            <a href="add.php?updatecenter=true" class="linking">Update Centers</a>
+        <div align="center" style="background-color: pink;padding: 10px">
+            <a href="add.php?addadmin=true" class="linking" style="color:black">Add Admin</a>
+            <a href="add.php?updateadmin=true" class="linking" style="color:black">Update Admin</a>
+            <a href="add.php?addcenters=true" class="linking" style="color:black">Add Centers</a>
+            <a href="add.php?updatecenter=true" class="linking" style="color:black">Update Centers</a>
         </div>
 
 

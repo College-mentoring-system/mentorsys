@@ -60,7 +60,7 @@ if($status == 'yes' || $status == 'Yes') {
     </style>
 </head>
 <body>
-<h2 align="center" style="color: blue"><?php echo ucfirst($center) . ' (' . strtoupper($course) . ')' ?></h2>
+<h2 align="center" style="color: black">STUDENT ATTENDENCE</h2>
 <div class="header">
 
     <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; MENU </span>

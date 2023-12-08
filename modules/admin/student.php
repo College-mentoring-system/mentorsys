@@ -35,7 +35,7 @@ if(isset($_GET['res'])) {
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin-CIMS</title>
+    <title>Admin-SCOE</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <style>
         .linking{
@@ -58,7 +58,7 @@ if(isset($_GET['res'])) {
                     width: 200px;
                 }
                 input:hover{
-                    background-color: lightblue;
+                    background-color: pink;
                 }
                     input[type=submit]:hover{
                     background-color: green;
@@ -68,7 +68,7 @@ if(isset($_GET['res'])) {
     </style>
 </head>
 <body>
-<h2 align="center" style="color: blue"><?php echo ucfirst($center) . ' (' . strtoupper($course) . ')' ?></h2>
+<h2 align="center" style="color: black">ADD STUDENT</h2>
 <div class="header">
 
     <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; MENU </span>
@@ -80,7 +80,7 @@ if(isset($_GET['res'])) {
 </div>
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.php" class="logo"><span style="color:red;font-size:30px">Sanjivani College of Engineering</span></a>
+    <a href="index.php" class="logo"><span style="color:white;font-size:30px">SCOE</span></a>
     <a href="profile.php"><?php echo $fname . " " . $lname . " (" . strtoupper($eid) . ")" ?></a>
     <a href="index.php">Home</a>
     <a href="student.php">Student</a>
@@ -93,9 +93,9 @@ if(isset($_GET['res'])) {
     <a href="update_password.php">Update Password</a>
     <a href="../../logout.php">Logout</a>
 </div>
-<div align="center" style="background-color: aquamarine;padding: 10px">
-    <a href="student.php?addstudent=true" class="linking">Add Student</a>
-    <a href="student.php?updatestudent=true" class="linking">Update Student</a>
+<div align="center" style="background-color: pink;padding: 10px">
+    <a href="student.php?addstudent=true" class="linking" style="color:black">Add Student</a>
+    <a href="student.php?updatestudent=true" class="linking" style="color:black">Update Student</a>
 </div>
 
 <?php if(isset($_GET['addstudent']) OR isset($_GET['batch'])) { ?>

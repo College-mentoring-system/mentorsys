@@ -41,7 +41,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
     <!DOCTYPE html>
     <html>
     <head>
-        <title><?php echo $fname.' '.$lname ?>-Hod's-CIMS</title>
+        <title><?php echo $fname.' '.$lname ?>-Hod's-SCOE</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -56,7 +56,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         </style>
     </head>
     <body>
-    <h2 align="center" style="color: blue"><?php echo ucfirst($center) . ' (' . strtoupper($course) . ')' ?></h2>
+    <h2 align="center" style="color: black">PROFILE</h2>
     <div class="header">
 
         <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; MENU </span>
@@ -68,7 +68,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
     </div>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.php" class="logo"><span style="color:red;font-size:30px">Sanjivani College of Engineering</span></a>
+        <a href="index.php" class="logo"><span style="color:white;font-size:30px">SCOE</span></a>
         <a href="profile.php"><?php echo $fname . " " . $lname . " (" . strtoupper($eid) . ")" ?></a>
         <a href="index.php">Home</a>
         <a href="student.php">Student</a>

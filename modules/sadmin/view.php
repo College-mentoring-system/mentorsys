@@ -71,7 +71,7 @@ if($status == 'yes' || $status == 'Yes') {
     </style>
 </head>
 <body>
-<h2 align="center" style="color: blue"><?php echo "Super Admin (Main Center)" ?></h2>
+<h2 align="center" style="color: black"><?php echo "SUPER ADMIN" ?></h2>
 <div class="header">
 
     <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; open </span>
@@ -92,10 +92,10 @@ if($status == 'yes' || $status == 'Yes') {
     <a href="../../logout.php">Logout</a>
 </div>
 
-<div align="center" style="background-color: aquamarine;padding: 10px">
-    <a href="view.php?students=true" class="linking">View Student</a>
-    <a href="view.php?teachers=true" class="linking">View Teachers</a>
-    <a href="view.php?batch=true" class="linking">View Batch</a>
+<div align="center" style="background-color: pink;padding: 10px">
+    <a href="view.php?students=true" class="linking" style="background-color:#b33b72;color:black"> View Student</a>
+    <a href="view.php?teachers=true" class="linking" style="background-color:#b33b72;color:black">View Teachers</a>
+    <a href="view.php?batch=true" class="linking" style="background-color:#b33b72;color:black">View Batch</a>
 </div>
 <?php
     if(isset($_GET['students'])){ ?>

@@ -68,7 +68,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
             </style>
         </head>
         <body>
-        <h2 align="center" style="color: blue"><?php echo ucfirst($center) . ' (' . strtoupper($course) . ')' ?></h2>
+        <h2 align="center" style="color: black">TEACHER ATTENDENCE</h2>
         <div class="header">
 
             <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; MENU </span>
@@ -93,9 +93,9 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
             <a href="update_password.php">Update Password</a>
             <a href="../../logout.php">Logout</a>
         </div>
-        <div align="center" style="background-color: aquamarine;padding: 10px">
-            <a href="teachersattendance.php?addattendance=true" class="linking">Add Attendance</a>
-            <a href="teachersattendance.php?updateattendance=true" class="linking">Update Attendance</a>
+        <div align="center" style="background-color: pink;padding: 10px">
+            <a href="teachersattendance.php?addattendance=true" class="linking" style="color:black">Add Attendance</a>
+            <a href="teachersattendance.php?updateattendance=true" class="linking" style="color:black">Update Attendance</a>
         </div>
 
         <?php if(isset($_GET['addattendance'])) {?>

@@ -27,18 +27,15 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         <html>
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>SAdmin-CIMS</title>
+            <title>SAdmin-SCOE</title>
             <link rel="stylesheet" type="text/css" href="../admin/css/style.css">
         </head>
         <body>
         <h2 align="center" style="color: black"><?php echo "Super Admin" ?></h2>
         <div class="header">
 
-<<<<<<< HEAD
             <span style="color:white;font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; Menu </span>
-=======
             <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; MENU </span>
->>>>>>> 34765061d9ccde569ffebd9db78338295b9b51c8
 
             <div class="header-right">
                 <a href="profile.php">

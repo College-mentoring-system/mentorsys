@@ -34,11 +34,11 @@ if($findrows = mysqli_fetch_assoc($find_admin_result)){
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Complaint-Mentor-CIMS</title>
+    <title>Complaint-Mentor-SCOE</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<h2 align="center" style="color: blue"><?php echo ucfirst($center) . ' (' . strtoupper($course) . ')' ?></h2>
+<h2 align="center" style="color: black">COMPLAINT FORM</h2>
 <div class="header">
 
     <span style="font-size:30px;cursor:pointer" class="logo" onclick="openNav()">&#9776; MENU </span>
@@ -64,7 +64,7 @@ if($findrows = mysqli_fetch_assoc($find_admin_result)){
     <a href="../../logout.php">Logout</a>
 </div>
 <br>
-<div class="container" style="float:left;border-left: 6px solid red">
+<div class="container" style="float:left;border-left: 6px solid pink">
     <form method="post">
         <h3 align="center">Complaint Form</h3>
         <label for="teacher">To Whom</label>
@@ -80,7 +80,7 @@ if($findrows = mysqli_fetch_assoc($find_admin_result)){
         <input type="submit" value="submit" name="submit">
     </form>
 </div>
-<div style="float: right;border-left: 6px solid red;" class="container" align="center">
+<div style="float: right;border-left: 6px solid pink;" class="container" align="center">
     <h3 align="center">Complaint History</h3>
     <table border="2">
         <tr>
