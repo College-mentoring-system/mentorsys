@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2019 at 06:00 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.4
+-- Generation Time: Dec 08, 2023 at 08:03 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.1.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -39,7 +38,7 @@ CREATE TABLE `attendance` (
   `center` varchar(10) NOT NULL,
   `course` varchar(10) NOT NULL,
   `subject` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `attendance`
@@ -67,15 +66,15 @@ CREATE TABLE `batches` (
   `year` varchar(20) NOT NULL DEFAULT '2018',
   `course` varchar(10) NOT NULL,
   `center` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `batches`
 --
 
 INSERT INTO `batches` (`id`, `batch`, `mentor`, `timings`, `year`, `course`, `center`) VALUES
-(1, '1001', 'E10002', '10:00am-2:00pm', '2018', 'IIT', 'jaipur1'),
-(2, '1002', '', '10:00am-2:00pm', '2018', 'IIT', 'jaipur1');
+(1, '1001', 'E10002', '10:00am-2:00pm', '2018', 'BTECH', 'infotech'),
+(2, '1002', '', '10:00am-2:00pm', '2018', 'Btech', 'mechanical');
 
 -- --------------------------------------------------------
 
@@ -90,15 +89,15 @@ CREATE TABLE `centers` (
   `dateofbuild` date NOT NULL,
   `admin` varchar(20) NOT NULL,
   `coures` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `centers`
 --
 
 INSERT INTO `centers` (`id`, `center`, `location`, `dateofbuild`, `admin`, `coures`) VALUES
-(1, 'jaipur1', 'jaipur', '2018-05-07', 'E10001', 'IIT'),
-(2, 'jaipur1', 'jaipur', '2018-07-17', 'E10005', 'PMT');
+(1, 'infotech', 'Scoe', '2018-05-07', 'E10001', 'Btech'),
+(2, 'mechanical', 'scoe', '2018-07-17', 'E10005', 'Btech');
 
 -- --------------------------------------------------------
 
@@ -120,7 +119,7 @@ CREATE TABLE `complaint` (
   `dateofcomp` date NOT NULL,
   `dateofreply` date NOT NULL,
   `replyed` varchar(2) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `complaint`
@@ -135,7 +134,8 @@ INSERT INTO `complaint` (`id`, `eid`, `teacher_type`, `username`, `batch`, `cent
 (7, 'E10001', 'admin', 'E10004', '', 'jaipur1', 'IIT', 'just to test hod', 'just to test hod secton', '', '2018-07-04', '0000-00-00', '0'),
 (9, 'E10000', 'sadmin', 'E10001', '', 'jaipur1', 'IIT', 'lk;j;kj', ';lkjlk', 'asdasdasdasdadasdadsad', '2018-07-12', '2018-07-18', '1'),
 (11, 'E10001', 'admin', 'ST1001', '1001', 'jaipur1', 'IIT', 'bah', 'sjjhagsjd', '', '2018-07-13', '0000-00-00', '0'),
-(13, 'E10000', 'sadmin', 'E10005', '', 'jaipur1', 'PMT', 'nononononononononon', 'sdgdi;sffsdfsdfsdfsdf sdfsd fsdf sf sf sdf', 'dasgjasdkf/', '2018-07-18', '2018-07-20', '1');
+(13, 'E10000', 'sadmin', 'E10005', '', 'jaipur1', 'PMT', 'nononononononononon', 'sdgdi;sffsdfsdfsdfsdf sdfsd fsdf sf sf sdf', 'dasgjasdkf/', '2018-07-18', '2018-07-20', '1'),
+(14, 'E10000', 'sadmin', 'E10000', '', '', '', 'spos', 'hii', '', '2023-12-08', '0000-00-00', '0');
 
 -- --------------------------------------------------------
 
@@ -150,7 +150,7 @@ CREATE TABLE `exams` (
   `dateofexam` date NOT NULL,
   `center` varchar(10) NOT NULL,
   `course` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `exams`
@@ -178,7 +178,7 @@ CREATE TABLE `marks` (
   `center` varchar(20) NOT NULL,
   `batch` varchar(20) NOT NULL,
   `dateofexam` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `marks`
@@ -236,15 +236,15 @@ CREATE TABLE `students` (
   `dateofreg` date NOT NULL,
   `pid` varchar(10) NOT NULL,
   `dateofleft` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `students`
 --
 
 INSERT INTO `students` (`id`, `sid`, `fname`, `lname`, `email`, `phone`, `address`, `district`, `state`, `postalcode`, `fee`, `scholarship`, `paidfee`, `status`, `course`, `batch`, `class`, `fathername`, `fathermob`, `fatheroccu`, `mothername`, `mothermob`, `motheroccu`, `10mark`, `12mark`, `preexam`, `preexamyear`, `preexammarks`, `center`, `mentor`, `timing`, `dateofreg`, `pid`, `dateofleft`) VALUES
-(1, 'ST1000', 'Bharat', 'Agarwal', 'bharatagsrwal@gmail.com', '9999999999', 'plot no. 300 4s colony', 'jaipur', 'rajasthan', '302013', '100002', '10', '10000', 'yes', 'IIT', '1001', '12+', 'xxxxx xxxxx', '0000000000', 'businessmen', 'xxxxx xxxxx', '000000000', 'houserwife', 'xx', 'xx', 'IIT', '20xx', '120', 'jaipur1', 'E10002', '10:00am-2:00pm', '2018-06-05', 'P1000', '0000-00-00'),
-(2, 'ST1001', 'Bharat1', 'Agarwal1', 'bharatagsrwal@gmail.com', '9999999999', 'plot no. 300 4s colony', 'jaipur', 'rajasthan', '302013', '100002', '10', '10000', 'yes', 'IIT', '1001', '12+', 'xxxxx xxxxx', '0000000000', 'businessmen', 'xxxxx xxxxx', '000000000', 'houserwife', 'xx', 'xx', 'IIT', '20xx', '120', 'jaipur1', 'E10002', '10:00am-2:00pm', '2018-06-05', 'P1001', '0000-00-00');
+(1, 'ST1000', 'Yash', 'Musmade', 'yash06@gmail.com', '9999999999', 'kopargaon', 'kopargaon', 'maharashtra', '414108', '100002', '10', '10000', 'yes', 'BECH', '1001', '12+', 'xxxxx xxxxx', '0000000000', 'businessmen', 'xxxxx xxxxx', '000000000', 'houserwife', 'xx', 'xx', 'BTECH', '20xx', '120', 'kopargaon', 'E10002', '10:00am-2:00pm', '2018-06-05', 'P1000', '0000-00-00'),
+(2, 'ST1001', 'swaraj', 'lande', 'swarajlande03@gmail.com', '9999999999', 'kopargaon', 'kopargaon', 'maharashtra', '414102', '100002', '10', '10000', 'yes', 'BTEC', '1001', '12+', 'xxxxx xxxxx', '0000000000', 'businessmen', 'xxxxx xxxxx', '000000000', 'houserwife', 'xx', 'xx', 'BTECH', '20xx', '120', 'maharashtr', 'E10002', '10:00am-2:00pm', '2018-06-05', 'P1001', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -274,19 +274,19 @@ CREATE TABLE `teachers` (
   `highestqualificationmarks` varchar(20) NOT NULL,
   `batchmentor` varchar(20) NOT NULL,
   `status` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `teachers`
 --
 
 INSERT INTO `teachers` (`id`, `eid`, `fname`, `lname`, `email`, `mobile`, `address`, `city`, `state`, `postalcode`, `salary`, `position`, `subject`, `course`, `center`, `dateofjoining`, `experience`, `highestqualification`, `highestqualificationmarks`, `batchmentor`, `status`) VALUES
-(1, 'E10002', 'Bharat1', 'Agarwal', 'bharatagsrwal@gmail.com', '8888888888', 'jaipututafa', 'jaipur', 'rajasthan', '302013', '10000', 'mentor', 'maths', 'IIT', 'jaipur1', '2018-06-07', '2Y', 'B-Tech', '100', '1001', 'yes'),
-(2, 'E10001', 'Bharat', 'Agarwal', 'bharatagsrwal@gmail.com', '8888888888', '300 4s jaipur', 'jaipur', 'Rajasthan', '302013', '10000', 'admin', '', 'IIT', 'jaipur1', '2018-06-07', '2Y', 'B-Tech', '100', '', 'yes'),
-(3, 'E10003', 'Bharat', 'Agarwal', 'bharatagsrwal@gmail.com', '8888888888', 'jaipur', 'jaipur', 'rajasthan', '302013', '10000', 'teacher', 'physics', 'IIT', 'jaipur1', '2018-06-07', '2Y', 'B-Tech', '100', '', 'yes'),
-(4, 'E10004', 'Bharat11', 'Agarwal11', 'bharatagsrwal@gmail.com', '8888888888', 'jaipur', 'jaipur', 'rajasthan', '302013', '10000', 'hod', 'physics', 'IIT', 'jaipur1', '2018-06-07', '2Y', 'B-Tech', '100', '', 'yes'),
-(5, 'E10000', 'Bharat1', 'Agarwal', 'bharatagsrwal@gmail.com', '8888888888', 'jaipututafa', 'jaipur', 'rajasthan', '302013', '10000', 'sadmin', '', '', '', '2018-06-07', '2Y', 'B-Tech', '100', '', 'yes'),
-(6, 'E10005', 'asdasd', 'gkhgh', 'jkhghgk@gmail.com', '7777777777', 'gkhg', 'hgk', 'ghk', '9999', '1000', 'admin', '', 'PMT', 'jaipur1', '2018-07-15', '2Y', 'Bteau', '100', '', 'yes');
+(1, 'E10002', 'swaraj', 'lande', 'swarajlande03@gmail.com', '8888888888', 'ahmednagar', 'ahmednagar', 'Maharashtra', '414105', '10000', 'mentor', 'DBMS', 'BTECH', 'kopargaon', '2018-06-07', '2Y', 'B-Tech', '100', '1001', 'yes'),
+(2, 'E10001', 'swaraj', 'lande', 'swarajlande03@gmail.com', '8888888888', 'kopargaon', 'kopargaon', 'Maharashtra', '414105', '10000', 'admin', '', 'BTECH', 'KOPARGAON', '2021-06-07', '2Y', 'B-Tech', '100', '', 'yes'),
+(3, 'E10003', 'Aditi', 'Kadam', 'aditi05@gmail.com', '8888888888', 'maharashtra', 'kopargaon', 'maharashtra', '451121', '10000', 'teacher', 'SPOS', 'BTECH', 'kopargaon', '2018-06-07', '2Y', 'B-Tech', '100', '', 'yes'),
+(4, 'E10004', 'Swapnil', 'Naikwadi', 'swapnil05@gmail.com', '8888888888', 'kopargaon', 'kopargaon', 'maharashtra', '45451', '10000', 'hod', 'TOC', 'BTECH', 'kopargaon', '2018-06-07', '2Y', 'B-Tech', '100', '', 'yes'),
+(5, 'E10000', 'swaraj', 'lande', 'swarajlande03@gmail.com', '8888888888', 'kopargaon', 'kopargaon', 'Maharashtra', '414106', '10000', 'sadmin', '', '', '', '2018-06-07', '2Y', 'B-Tech', '100', '', 'yes'),
+(6, 'E10005', 'swaraj', 'lande', 'swarajlande03@gmail.com', '7777777777', 'kopargaon', 'kopargaon', 'maharashtra', '414105', '1000', 'admin', '', 'PMT', 'jaipur1', '2018-07-15', '2Y', 'Btech', '100', '', 'yes');
 
 -- --------------------------------------------------------
 
@@ -304,7 +304,7 @@ CREATE TABLE `tea_attendance` (
   `status` varchar(10) NOT NULL,
   `center` varchar(20) NOT NULL,
   `course` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tea_attendance`
@@ -328,7 +328,7 @@ CREATE TABLE `tea_batche` (
   `subject` varchar(10) NOT NULL,
   `center` varchar(10) NOT NULL,
   `course` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tea_batche`
@@ -354,7 +354,7 @@ CREATE TABLE `timetable` (
   `day` varchar(20) NOT NULL,
   `year` varchar(20) NOT NULL,
   `course` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `timetable`
@@ -376,7 +376,7 @@ CREATE TABLE `users` (
   `username` varchar(10) NOT NULL,
   `password` varchar(20) NOT NULL,
   `type` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `users`
@@ -498,7 +498,7 @@ ALTER TABLE `centers`
 -- AUTO_INCREMENT for table `complaint`
 --
 ALTER TABLE `complaint`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `exams`
