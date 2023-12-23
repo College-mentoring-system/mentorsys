@@ -80,16 +80,15 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
         </div>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.php" class="logo"><span style="color:red;font-size:30px">Sanjivani College of Engineering</span></a>
+            <a href="index.php" class="logo"><span style="color:white;font-size:30px">SCOE</span></a>
             <a href="profile.php"><?php echo $fname . " " . $lname . " (" . strtoupper($eid) . ")" ?></a>
             <a href="index.php">Home</a>
             <a href="student.php">Student</a>
-            <a href="studentattendance.php">Student Attendance</a>
+            
             <a href="teachers.php">Teachers</a>
-            <a href="teachersattendance.php">Teachers Attendance</a>
+            
             <a href="add.php">Add TimeTable/batch</a>
-            <a href="complaint.php">Complaint</a>
-            <a href="incomingcomplaint.php">Incoming Complaint</a>
+            
             <a href="update_password.php">Update Password</a>
             <a href="../../logout.php">Logout</a>
         </div>
